@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/node-keyboard-shapes.svg)](https://badge.fury.io/js/node-keyboard-shapes)
 
-Object shape mapper for [node-keyboard](../node-keyboard) - coverts objects into chords!
+Object shape mapper for [node-keyboard](http://github.com/justinjmoses/node-keyboard) - coverts objects into chords!
 
 ![](https://media0.giphy.com/media/3o7ZeTKcoYYyfSKSzu/giphy.gif)
 
