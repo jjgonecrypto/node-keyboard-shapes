@@ -1,0 +1,23 @@
+{
+  "name": "node-keyboard-shapes",
+  "version": "1.0.0",
+  "description": "object shape mapper for node-keybord",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "keywords": [
+    "node-keyboard-shapes"
+  ],
+  "author": "justin j. moses <justinjmoses@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/justinjmoses/node-keyboard-shapes",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "^3.9.1"
+  }
+}
