@@ -21,7 +21,7 @@ Then start node keyboard via `node keyboard` and import this plugin via `const s
 ## Usage
 
 ```javascript
-const shapes = require('node-keyboard-shapes)
+const shapes = require('node-keyboard-shapes')
 
 shapes.objToChord({ name: 'something', age: -12, thoughts: ['stream', 'of', 'consciousness']}).forEach(play)
 ```
