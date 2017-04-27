@@ -17,3 +17,11 @@ Then start node keyboard via `node-keyboard`, and import this plugin via `const 
 If instead you cloned node-keyboard, then install locally in that folder via `npm i node-keyboard-shapes`
 
 Then start node keyboard via `node keyboard` and import this plugin via `const shapes = require('node-keyboard-shapes')`
+
+## Usage
+
+```javascript
+const shapes = require('node-keyboard-shapes)
+
+shapes.objToChord({ name: 'something', age: -12, thoughts: ['stream', 'of', 'consciousness']}).forEach(play)
+```
