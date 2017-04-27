@@ -16,6 +16,7 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
+    "tonal": "0.69.5"
   },
   "devDependencies": {
     "eslint": "^3.9.1"
