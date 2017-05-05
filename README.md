@@ -21,13 +21,14 @@ Then start node keyboard via `node keyboard` and import this plugin via `const s
 ## API
 
 ```javascript
-objToChord(inputObject, key = 'C3')
+shapes.objToChord(inputObject, key = 'C3')
 // returns { intervals: [...], notes: [...], chords: [...] }
 ```
 
-## Usage
+## Example
 
 ```javascript
+// in node-keyboard:
 const shapes = require('node-keyboard-shapes')
 
 const shape = shapes.objToChord({ name: 'something', age: 12, ts: new Date() })
