@@ -21,7 +21,7 @@ Then start node keyboard via `node keyboard` and import this plugin via `const s
 ## API
 
 ```javascript
-shapes.objToChord(inputObject, key = 'C3')
+shapes.objToChord(key = 'C3')(inputObject)
 // returns { intervals: [...], notes: [...], chords: [...] }
 ```
 
@@ -31,7 +31,7 @@ shapes.objToChord(inputObject, key = 'C3')
 // in node-keyboard:
 const shapes = require('node-keyboard-shapes')
 
-const shape = shapes.objToChord({ name: 'something', age: 12, ts: new Date() })
+const shape = shapes.objToChord( C3 )({ name: 'something', age: 12, ts: new Date() })
 //  {
 //      intervals: [ '1P', '3M', '5P', '7M' ,'8P' ],
 //      notes: [ 'C3', 'E3', 'G3', 'B3', 'C4' ],
