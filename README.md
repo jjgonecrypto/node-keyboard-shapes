@@ -18,10 +18,23 @@ If instead you cloned node-keyboard, then install locally in that folder via `np
 
 Then start node keyboard via `node keyboard` and import this plugin via `const shapes = require('node-keyboard-shapes')`
 
+## API
+
+```javascript
+objToChord(inputObject, key = 'C3')
+// returns { intervals: [...], notes: [...], chords: [...] }
+```
+
 ## Usage
 
 ```javascript
 const shapes = require('node-keyboard-shapes')
 
-shapes.objToChord({ name: 'something', age: -12, thoughts: ['stream', 'of', 'consciousness']}).forEach(play)
+const shape = shapes.objToChord({ name: 'something', age: 12, ts: new Date() })
+//  {
+//      intervals: [ '1P', '3M', '5P', '7M' ,'8P' ],
+//      notes: [ 'C3', 'E3', 'G3', 'B3', 'C4' ],
+//      chords: [ 'CMaj7' ]
+//  }
+shape.notes.forEach(play)
 ```
