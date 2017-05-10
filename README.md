@@ -21,9 +21,20 @@ Then start node keyboard via `node keyboard` and import this plugin via `const s
 ## API
 
 ```javascript
-shapes.objToChord(key = 'C3')(inputObject)
+shapes.objToChord(key = 'C3', mappings = new Map([[type, intervals], [...]]))(inputObject)
 // returns { intervals: [...], notes: [...], chords: [...] }
 ```
+
+`type` is one of the following:
+* `Number`
+* `String`
+* `Boolean`
+* `Date`
+* `Array`
+* `Function`
+* `Object`
+
+`intervals` may be a string or an array of strings. Should map to a string representation of a musical interval. See [tonal docs](http://danigb.github.io/tonal/api/module-harmonizer.html).
 
 ## Example
 
@@ -38,4 +49,19 @@ const shape = shapes.objToChord( C3 )({ name: 'something', age: 12, ts: new Date
 //      chords: [ 'CMaj7' ]
 //  }
 shape.notes.forEach(play)
+```
+
+*Or with custom mappings:*
+
+```javascript
+const shape = shapes.objToChord( C3, new Map([
+    [Number, '3m'],
+    [String, ['5P', '6m']],
+    [Date, '9M']
+]) )({ name: 'something', age: 12, ts: new Date() })
+// {
+//    intervals: [ '1P', '3m', '5P', '6m', '9M' ],
+//    notes: [ 'C3', 'Eb3', 'G3', 'Ab3', 'D4' ],
+//   chords: [ 'AbM7#11' ]
+// }
 ```
