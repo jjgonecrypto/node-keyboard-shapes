@@ -4,13 +4,13 @@ const tonal = require('tonal')
 
 module.exports = {
     objToChord(key = 'C3', mappings = new Map([
-        [Number, ['3M', '5P']],
+        [Number, ['1P', '5P']],
         [String, ['5P', '8P']],
         [Boolean, '12P'],
         [Date, '7M'],
         [Array, '3m'],
-        [Function, '9m'],
-        [Object, '8P'],
+        [Function, '9M'],
+        [Object, '3M'],
     ])) {
         return obj => {
             let intervals = Object.keys(obj).map(key => {
@@ -50,5 +50,15 @@ module.exports = {
                 chords
             }
         }
+    },
+
+    createObjectListener(handler, obj = {}) {
+        return new Proxy(obj, {
+            set(o, prop, value) {
+                o[prop] = value
+                handler(value, prop)
+                return value
+            }
+        })
     }
 }

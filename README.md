@@ -36,6 +36,11 @@ shapes.objToChord(key = 'C3', mappings = new Map([[type, intervals], [...]]))(in
 
 `intervals` may be a string or an array of strings. Should map to a string representation of a musical interval. See [tonal docs](http://danigb.github.io/tonal/api/module-harmonizer.html).
 
+```javascript
+shapes.createObjectListener(handler = (value, prop) => {}, obj = {})
+// returns new object that will invoke the handler every time a property is set
+```
+
 ## Example
 
 ```javascript
