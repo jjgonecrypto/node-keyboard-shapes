@@ -36,31 +36,8 @@ shapes.createObjectListener(handler = (key, value) => {}, obj = {})
 // returns new object that will invoke the handler every time a property is set
 ```
 
-## Example
+## Examples
 
-```javascript
-// in node-keyboard:
-const shapes = require('node-keyboard-shapes')
-
-const shape = shapes.objToChord( C3 )({ embed: {}, name: 'lucy', age: 52, ts: new Date() })
-//  {
-//      intervals: [ '1P', '3M', '5P', '7M' ,'8P' ],
-//      notes: [ 'C3', 'E3', 'G3', 'B3', 'C4' ],
-//      chords: [ 'CMaj7' ]
-//  }
-shape.notes.forEach(play)
-```
-
-*Or with custom mappings:*
-
-```javascript
-const shapeN = shapes.objToChord( C3, (key, value) => {
-    if (typeof value !== 'number') return '5P'
-    return value < 0 ? '3m' : '3M'
-})({ name: 'iron man', score: -12 })
-//  {
-//      intervals: [ '1P', '3m', '5P' ],
-//      notes: [ 'C3', 'Eb3', 'G3' ],
-//      chords: [ 'Cm' ]
-//  }
-```
+* [type mapping](./examples/01_typeMapper.js)
+* [custom mapping](./examples/02_customMapper.js)
+* [object listener](./examples/03_listener.js)

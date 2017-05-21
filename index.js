@@ -1,6 +1,8 @@
 'use strict'
 
 const tonal = require('tonal')
+const path = require('path')
+const examples = require('node-examples')
 
 const typeMapper = {
     standard: new Map([
@@ -84,3 +86,5 @@ const shapes = {
 }
 
 module.exports = shapes
+
+examples({ path: path.join(__dirname, 'examples'), prefix: 'shape_example_' })
