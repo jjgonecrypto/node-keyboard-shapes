@@ -6,13 +6,13 @@ const examples = require('node-examples')
 
 const typeMapper = {
     standard: new Map([
-        [Number, ['1P', '5P']],
-        [String, ['5P', '8P']],
-        [Boolean, '12P'],
-        [Date, '7M'],
-        [Array, '3m'],
-        [Function, '9M'],
-        [Object, '3M'],
+        [String, '3M'],
+        [Number, '5P'],
+        [Boolean, '7m'],
+        [Date, '5d'],
+        [Array, '11P'],
+        [Function, '6M'],
+        [Object, '9M'],
     ])
 }
 
